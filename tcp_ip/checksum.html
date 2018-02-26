@@ -6,7 +6,7 @@ RFC791 定义了checksum 的计算方法：
     The checksum field is the 16-bit one's complement of the one's complement sum of all 16-bit words in the header. For purposes of computing the checksum, the value of the checksum field is zero.
 
 <h3>计算IPv4 报头checksum的例子：</h3>
-<h4>
+<p>
   以下是一个IP报头16进制的例子：
        4500 0073 0000 4000 4011 b861 c0a8 0001
        c0a8 00c7
@@ -24,11 +24,11 @@ RFC791 定义了checksum 的计算方法：
         0100 0111 1001 1110 取反以后就是:
         1011 1000 0110 0001
         等于十六进制的B861，也就如我们提供例子里面的报头显示的一样。
-</h4>
+</p>
 
 
 <h3>校验IPV4 报头</h3>
-<h4>
+<p>
 我们再用上面的例子来演示报头的计算，我们把报头所有数字相加：
 4500 + 0073 + 0000 + 4000 + 4011 + b861 + c0a8 + 0001 + c0a8 + 00c7 = 2fffd
 把超出16个比特的部分加起来：
@@ -36,5 +36,5 @@ fffd + 2 = ffff
 然后再取ffff的反码，得到0,说明计算结果正确。
 
 
+</p>
 <h3>注意checksum 检验正确并不能保证IP报头顺序正确</h3>
-</h4>
